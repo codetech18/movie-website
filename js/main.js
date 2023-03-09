@@ -1,9 +1,10 @@
 // swiper js
 var swiper = new Swiper(".popular-content", {
-    spaceBetween: 30,
-    centeredSlides: True,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    centeredSlides: true,
     autoplay: {
-        delay: 250,
+        delay: 755500,
         disableOnInteraction: false
     },
     pagination: {
@@ -13,5 +14,27 @@ var swiper = new Swiper(".popular-content", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        280: {
+         slidesPerView: 1,
+         spaceBetween: 10,
+        },
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        510: {
+         slidesPerView: 2,
+         spaceBetween: 10,
+        },
+        758: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        }, 
+        900: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },  
     },
 }) 
