@@ -4,7 +4,7 @@ var swiper = new Swiper(".popular-content", {
     spaceBetween: 10,
     centeredSlides: true,
     autoplay: {
-        delay: 755500,
+        delay: 5500,
         disableOnInteraction: false
     },
     pagination: {
@@ -37,4 +37,18 @@ var swiper = new Swiper(".popular-content", {
             spaceBetween: 20,
         },  
     },
-}) 
+});
+
+let playButton = document.querySelector(".play-movie");
+let video = document.querySelector(".video-container");
+let myvideo = document.querySelector("#myvideo");
+let closebtn = document.querySelector(".close-video");
+
+playButton.onclick = () => {
+    video.classList.add("show-video");
+    myvideo.play();
+};
+closebtn.onclick = () => {
+    video.classList.remove("show-video");
+    myvideo.pause();
+};
